@@ -31,28 +31,28 @@ public class AutowireCapableBeanFactoryDemo {
         AutowireCapableBeanFactory beanFactory = applicationContext.getAutowireCapableBeanFactory();
 
         // 创建指定Bean名称的实例
-        // createBean(beanFactory);
+//         createBean(beanFactory);
 
         // 对给定的Bean实例进行进一步的配置
-        // configureBean(beanFactory);
+//         configureBean(beanFactory);
 
         // 对给定的Bean实例进行自动装配
-        // autowireBean(beanFactory);
+//         autowireBean(beanFactory);
 
         // 使用指定的自动装配模式创建Bean实例
-        // autowire(beanFactory);
+//         autowire(beanFactory);
 
         // 对给定的Bean实例的属性进行自动装配
-        // autowireBeanProperties(beanFactory);
+//         autowireBeanProperties(beanFactory);
 
         // 将属性值应用到给定的Bean实例
-        // applyBeanPropertyValues(beanFactory);
+//         applyBeanPropertyValues(beanFactory);
 
         // 初始化给定的Bean实例
-        // initializeBean(beanFactory);
+//         initializeBean(beanFactory);
 
         // 销毁给定的Bean实例
-        // destroyBean(beanFactory);
+         destroyBean(beanFactory);
 
         // 解析Bean之间的依赖关系
         // resolveDependency(beanFactory);
@@ -82,7 +82,7 @@ public class AutowireCapableBeanFactoryDemo {
 
     private static void autowire(AutowireCapableBeanFactory beanFactory) {
         Object myService = beanFactory.autowire(MyService.class, AutowireCapableBeanFactory.AUTOWIRE_BY_TYPE, false);
-        System.out.println("调用autowire方法,创建Bean对象 =" + myService);
+        System.out.println("调用autowire方法,创建Bean对象 = " + myService);
     }
 
     private static void autowireBeanProperties(AutowireCapableBeanFactory beanFactory) {

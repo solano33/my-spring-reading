@@ -6,6 +6,5 @@ import org.springframework.stereotype.Controller;
  * @author xcs
  * @date 2023年11月07日 17时47分
  **/
-@Controller("myController")
-public class MyController {
+public class MyController2 {
 }

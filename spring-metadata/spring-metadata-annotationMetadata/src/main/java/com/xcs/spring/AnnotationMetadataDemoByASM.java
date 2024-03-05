@@ -10,11 +10,18 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
+ * ASM 字节码技术
  * @author xcs
  * @date 2023年10月31日 16时17分
  **/
 public class AnnotationMetadataDemoByASM {
 
+    /**
+     * ASM 字节码技术
+     * AnnotationMetadata impl class is class org.springframework.core.type.classreading.SimpleAnnotationMetadata
+     * MyBean is a @Component: true
+     * @Component value is myBean
+     */
     public static void main(String[] args) throws Exception {
         // 创建 MetadataReaderFactory
         SimpleMetadataReaderFactory readerFactory = new SimpleMetadataReaderFactory();

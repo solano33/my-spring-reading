@@ -12,6 +12,12 @@ import java.util.Map;
  **/
 public class AnnotationMetadataDemoByReflection {
 
+    /**
+     * java反射
+     * AnnotationMetadata impl class is class org.springframework.core.type.StandardAnnotationMetadata
+     * MyBean is a @Component: true
+     * @Component value is myBean
+     */
     public static void main(String[] args) throws Exception {
         // 获取 AnnotationMetadata
         AnnotationMetadata annotationMetadata = AnnotationMetadata.introspect(MyBean.class);

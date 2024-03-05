@@ -27,24 +27,27 @@ public class ConfigurablePropertyResolverDemo {
 
         // 创建 ConfigurablePropertyResolver
         PropertySourcesPropertyResolver propertyResolver = new PropertySourcesPropertyResolver(propertySources);
+//
+//        // 设置和获取转换服务
+//        ConfigurableConversionService conversionService = new DefaultConversionService();
+//        propertyResolver.setConversionService(conversionService);
 
-        // 设置和获取转换服务
-        ConfigurableConversionService conversionService = new DefaultConversionService();
-        propertyResolver.setConversionService(conversionService);
+//        // 设置占位符前后缀
+//        propertyResolver.setPlaceholderPrefix("${");
+//        propertyResolver.setPlaceholderSuffix("}");
+//
+//        // 设置默认值分隔符
+//        propertyResolver.setValueSeparator(":");
+//
+//        // 设置未解析占位符的处理方式
+//        propertyResolver.setIgnoreUnresolvableNestedPlaceholders(true);
+//
+//        // 设置并验证必需的属性
+//        propertyResolver.setRequiredProperties("app.name", "app.version");
+//        propertyResolver.validateRequiredProperties();
 
-        // 设置占位符前后缀
-        propertyResolver.setPlaceholderPrefix("${");
-        propertyResolver.setPlaceholderSuffix("}");
-
-        // 设置默认值分隔符
-        propertyResolver.setValueSeparator(":");
-
-        // 设置未解析占位符的处理方式
-        propertyResolver.setIgnoreUnresolvableNestedPlaceholders(true);
-
-        // 设置并验证必需的属性
-        propertyResolver.setRequiredProperties("app.name", "app.version");
-        propertyResolver.validateRequiredProperties();
+        String port = propertyResolver.resolveRequiredPlaceholders("${app.port:8080}");
+        System.out.println("port = " + port);
 
         // 读取属性
         String appName = propertyResolver.getProperty("app.name");

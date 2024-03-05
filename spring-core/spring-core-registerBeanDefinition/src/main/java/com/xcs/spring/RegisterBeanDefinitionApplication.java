@@ -1,6 +1,7 @@
 package com.xcs.spring;
 
 import com.xcs.spring.bean.MyBean;
+import com.xcs.spring.bean.MyConditionBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

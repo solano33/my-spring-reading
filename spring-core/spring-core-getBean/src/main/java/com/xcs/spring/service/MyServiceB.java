@@ -9,4 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyServiceB {
 
+    @Override
+    public String toString() {
+        return "MyServiceB{}";
+    }
 }

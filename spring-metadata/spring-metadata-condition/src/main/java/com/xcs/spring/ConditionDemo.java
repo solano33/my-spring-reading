@@ -22,7 +22,7 @@ public class ConditionDemo {
         Resource[] resources = resolver.getResources("classpath*:com/xcs/spring/bean/**/*.class");
 
         // 创建自定义条件类的实例，用于条件匹配
-        Condition condition = new MyOnClassCondition("com.xcs.spring.ConditionDemo1");
+        Condition condition = new MyOnClassCondition("com.xcs.spring.ConditionDemo");
 
         // 遍历每个资源，判断是否满足自定义条件
         for (Resource resource : resources) {

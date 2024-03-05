@@ -18,7 +18,7 @@ public class PathMatchingResourcePatternResolverDemo {
         }
 
         // 加载文件系统中的所有匹配资源
-        Resource[] fileResources = resolver.getResources("file:/idea-work-space-xcs/spring-reading/spring-resources/spring-resource-resourceLoader/*.txt");
+        Resource[] fileResources = resolver.getResources("spring-resource-resourceLoader\\myfile1.txt");
         for (Resource resource : fileResources) {
             System.out.println("File = " + resource.getFilename());
         }

@@ -92,9 +92,13 @@ public class ConfigurableBeanFactoryDemo {
         configurableBeanFactory.destroyBean(beanName, beanInstance);
         System.out.println("销毁指定 Bean 实例: " + beanName);
 
+        System.out.println("销毁前：configurableBeanFactory.getBean(\"myService\") = " + configurableBeanFactory.getBean("myService"));
+
         // 销毁所有单例 Bean
         configurableBeanFactory.destroySingletons();
         System.out.println("销毁所有单例Bean destroySingletons" );
+
+        System.out.println("销毁后：configurableBeanFactory.getBean(\"myService\") = " + configurableBeanFactory.getBean("myService"));
     }
 
 }

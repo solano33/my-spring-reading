@@ -12,4 +12,9 @@ public class MyServiceA {
     public void destroy(){
         System.out.println("MyServiceA.destroy");
     }
+
+    @Override
+    public String toString() {
+        return "MyServiceA{}";
+    }
 }

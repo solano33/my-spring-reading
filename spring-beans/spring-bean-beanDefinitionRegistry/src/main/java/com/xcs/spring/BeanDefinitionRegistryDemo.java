@@ -39,6 +39,8 @@ public class BeanDefinitionRegistryDemo {
         int beanDefinitionCount = beanFactory.getBeanDefinitionCount();
         System.out.println("Bean定义的数量 = " + beanDefinitionCount);
 
+        // Object myBean = beanFactory.getBean("myBean");
+
         // 检查Bean名称是否已被使用
         boolean isBeanNameInUse = beanFactory.isBeanNameInUse("myBean");
         System.out.println("Bean名称(myBean)是否被使用 = " + isBeanNameInUse);

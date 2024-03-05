@@ -6,6 +6,7 @@ import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.ResolvableType;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -45,11 +46,15 @@ public class ListableBeanFactoryDemo {
         System.out.println("根据注解获取Bean名称: " + String.join(", ", beanNamesForAnnotation));
 
         // 根据注解类型获取所有 bean 实例
-        Map<String, Object> beansWithAnnotation = beanFactory.getBeansWithAnnotation(Service.class);
+        Map<String, Object> beansWithAnnotation = beanFactory.getBeansWithAnnotation(Component.class);
         System.out.println("根据注解类型获取所有Bean实例: " + beansWithAnnotation);
 
         // 在指定 bean 上查找指定类型的注解
-        Service annotation = beanFactory.findAnnotationOnBean("myService", Service.class);
+        Component annotation = beanFactory.findAnnotationOnBean("myService", Component.class);
         System.out.println("指定Bean上查找指定类型的注解: " + annotation);
+
+//        System.out.println("beanFactory.getBean(\"myBean\") = " + beanFactory.getBean("myBean"));
+        System.out.println("beanFactory.getBean(\"myBeanFactory\") = " + beanFactory.getBean("myBeanFactory"));
+        System.out.println("beanFactory.getBean(\"&myBeanFactory\") = " + beanFactory.getBean("&myBeanFactory"));
     }
 }

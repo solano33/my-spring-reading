@@ -49,6 +49,7 @@ public class ConfigurableListableBeanFactoryDemo {
         Iterator<String> beanNamesIterator = beanFactory.getBeanNamesIterator();
         System.out.print("所有 Bean 的名称: ");
         beanNamesIterator.forEachRemaining(System.out::print);
+        System.out.println();
 
         // 清除元数据缓存
         beanFactory.clearMetadataCache();

@@ -30,6 +30,7 @@ public class BeanDefinitionHolderDemo {
         BeanDefinitionHolder beanDefinitionHolder = new BeanDefinitionHolder(beanDefinition, beanName, aliases);
 
         // 使用 BeanDefinitionReaderUtils 注册 BeanDefinitionHolder
+        boolean b = beanDefinitionHolder.matchesName("myBeanZ");
         BeanDefinitionReaderUtils.registerBeanDefinition(beanDefinitionHolder, beanFactory);
 
         System.out.println("myBean = " + beanFactory.getBean("myBean"));

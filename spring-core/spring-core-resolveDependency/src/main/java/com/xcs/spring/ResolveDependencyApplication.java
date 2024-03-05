@@ -29,7 +29,13 @@ public class ResolveDependencyApplication {
         System.out.println("Before MyServiceB = " + injectTarget + "\n");
 
         methodResolveDependency(beanFactory, injectTarget, "setMethodMyServiceA");
+
+        System.out.println("After methodResolveDependency MyServiceB = " + injectTarget + "\n");
+
         fieldResolveDependency(beanFactory, injectTarget, "fieldMyServiceA");
+
+        System.out.println("After fieldResolveDependency MyServiceB = " + injectTarget + "\n");
+
         fieldResolveDependency(beanFactory, injectTarget, "myPropertyValue");
 
         System.out.println("After MyServiceB = " + injectTarget + "\n");

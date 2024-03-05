@@ -27,11 +27,11 @@ public class MyBean {
     }
 
     public void init(){
-        System.out.println("execute com.xcs.spring.bean.MyBean.init");
+        System.out.println("自定义：execute com.xcs.spring.bean.MyBean.init");
     }
 
     public void destroy(){
-        System.out.println("execute com.xcs.spring.bean.MyBean.destroy");
+        System.out.println("自定义：execute com.xcs.spring.bean.MyBean.destroy");
     }
 
     @Override
